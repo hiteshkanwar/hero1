@@ -99,18 +99,13 @@ test('memoized selectors', () => {
   expect(fn2(stateB) !== fn2(stateC)).toBeTruthy();
 });
 
-
-ans
-
-  expect(fn1(stateA) === fn1(stateB)).toBeTruthy();
-  expect(fn1(stateA) === fn1(stateC)).toBeTruthy();
-  expect(fn1(stateB) !== fn1(stateC)).toBeTruthy();
-  
-  expect(fn2(stateA) === fn2(stateA)).toBeTruthy();
-  expect(fn2(stateA) === fn2(stateB)).toBeTruthy();
-  expect(fn2(stateA) !== fn2(stateC)).toBeTruthy();
-  expect(fn2(stateB) !== fn2(stateC)).toBeTruthy();
-```
+false
+false
+true
+false
+false
+true
+true
 
 Yes it will fail as when we compare the object we are comparing the reference type not the value in memory so it will be error if it seems to be equal but like 
 
